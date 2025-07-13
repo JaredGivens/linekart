@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://700taqpoelhv"]
+
+[ext_resource type="Script" uid="uid://gtuhrjpt5pl6" path="res://Racer.cs" id="1_aicwh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu7gb"]
+size = Vector2(32, 64)
+
+[node name="Racer" type="CharacterBody2D"]
+script = ExtResource("1_aicwh")
+RPS = 1.392
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.1472, 0.63664, 0.92, 1)
+polygon = PackedVector2Array(-16, 8, 16, 8, 16, -8, -16, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qu7gb")

@@ -11,13 +11,26 @@ config_version=5
 [application]
 
 config/name="LineKart"
-run/main_scene="res://Bl_section/bl_grass.tscn"
+run/main_scene="uid://q7sam8s74mdd"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 
 [dotnet]
 
 project/assembly_name="LineKart"
+
+[input]
+
+turn={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(242, 0),"global_position":Vector2(261, 96),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq0tswk0s3h8g"]
+
+[ext_resource type="Script" uid="uid://c6lcutxmhr68v" path="res://PlayerController.cs" id="1_lvefo"]
+[ext_resource type="PackedScene" uid="uid://700taqpoelhv" path="res://racer.tscn" id="2_f0yg5"]
+
+[node name="PlayerController" type="Node2D" node_paths=PackedStringArray("Player", "_cam", "_indicatorLine", "_turnLine")]
+script = ExtResource("1_lvefo")
+Player = NodePath("CharacterBody2D")
+_cam = NodePath("CharacterBody2D/Camera2D")
+_indicatorLine = NodePath("Indicator")
+_turnLine = NodePath("Turn")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_f0yg5")]
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+ignore_rotation = false
+zoom = Vector2(1.81, 1.81)
+
+[node name="Turn" type="Line2D" parent="."]
+z_index = -1
+width = 4.0
+default_color = Color(0.356973, 0.82, 0.1886, 1)
+
+[node name="Indicator" type="Line2D" parent="."]
+width = 2.0
+default_color = Color(0.13, 1, 0.855, 1)

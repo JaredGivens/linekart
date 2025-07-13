@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://q7sam8s74mdd"]
+
+[ext_resource type="PackedScene" uid="uid://cq0tswk0s3h8g" path="res://player_controller.tscn" id="1_mll3j"]
+[ext_resource type="Script" uid="uid://5skmp1fdgwft" path="res://Scripts/Track.cs" id="1_phvr8"]
+
+[node name="Track" type="Node2D" node_paths=PackedStringArray("_pc")]
+script = ExtResource("1_phvr8")
+_pc = NodePath("PlayerController")
+
+[node name="PlayerController" parent="." instance=ExtResource("1_mll3j")]
+z_index = 2

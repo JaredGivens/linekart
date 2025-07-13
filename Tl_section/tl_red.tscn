@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmpo1pcjdxy36"]
+
+[ext_resource type="Script" uid="uid://crbdnptmh5afl" path="res://Scripts/Section.cs" id="1_2ru8u"]
+
+[sub_resource type="Curve2D" id="Curve2D_2ajxu"]
+_data = {
+"points": PackedVector2Array(64, 104, -64, -104, 302, 1023, -16, 92, 16, -92, 150, 621, -154, -32, 154, 32, 378, 253, -126, 32, 126, -32, 616, 571, -172, -22, 172, 22, 854, 429)
+}
+point_count = 5
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("offroad", "offroad2", "boost", "Road")]
+script = ExtResource("1_2ru8u")
+offroad = NodePath("Polygon2D")
+offroad2 = []
+boost = []
+Road = NodePath("Path2D")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.69, 0.1035, 0.1035, 1)
+polygon = PackedVector2Array(0, 0, 1024, 0, 1024, 1024, 0, 1024)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2ajxu")

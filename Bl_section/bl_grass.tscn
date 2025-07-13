@@ -1,20 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhsws8h6spne"]
+[gd_scene load_steps=4 format=3 uid="uid://bhsws8h6spne"]
 
-[ext_resource type="Script" uid="uid://crbdnptmh5afl" path="res://Scripts/Section.cs" id="1_p6smc"]
+[ext_resource type="Script" uid="uid://crbdnptmh5afl" path="res://Scripts/Section.cs" id="1_hqh48"]
+[ext_resource type="Texture2D" uid="uid://bs0a2oi1i8ujk" path="res://SBS - Tiny Texture Pack 2 - 512x512/512x512/Dirt/Dirt_15-512x512.png" id="2_ulqh2"]
 
 [sub_resource type="Curve2D" id="Curve2D_yk8q7"]
 _data = {
-"points": PackedVector2Array(210, 4, -256, 0, 1024, 512, 36, 42, -36, -42, 642, 365, 0, 256, -4, -184, 512, 0)
+"points": PackedVector2Array(164, -50, -164, 50, 1020, 835, 150, 4, -150, -4, 602, 915, 12, 116, -12, -116, 352, 695, -134, 140, 134, -140, 578, 221)
 }
-point_count = 3
+point_count = 4
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_offroad", "_road")]
-script = ExtResource("1_p6smc")
-_offroad = NodePath("Polygon2D")
-_road = NodePath("Path2D")
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("offroad", "offroad2", "boost", "Road")]
+script = ExtResource("1_hqh48")
+offroad = NodePath("Polygon2D")
+offroad2 = []
+boost = []
+Road = NodePath("Path2D")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.890424, 0, 0.0242831, 1)
+texture = ExtResource("2_ulqh2")
 polygon = PackedVector2Array(0, 0, 1024, 0, 1024, 1024, 0, 1024)
 
 [node name="Path2D" type="Path2D" parent="."]

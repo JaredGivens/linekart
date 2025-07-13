@@ -3,18 +3,12 @@ using System;
 
 public partial class Section : Node2D
 {
-  [Export]
-  private Polygon2D _offroad;
-  [Export]
-  private Path2D _road;
-  private CollisionPolygon2D _collider = new();
-  private Line2D _border = new();
-  public override void _Ready() {
-    var points = _road.Curve.GetBakedPoints();
-    _collider.Polygon = points;
-    _border.Points = points;
-    _border.Width = 128.0f;
-    AddChild(_collider);
-    AddChild(_border);
-  }
+    [Export]
+    public Polygon2D offroad;
+    [Export]
+    public Godot.Collections.Array<Polygon2D> offroad2;
+    [Export]
+    public Godot.Collections.Array<Polygon2D> boost;
+    [Export]
+    public Path2D Road;
 }

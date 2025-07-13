@@ -4,14 +4,16 @@
 
 [sub_resource type="Curve2D" id="Curve2D_2ajxu"]
 _data = {
-"points": PackedVector2Array(0, -104, 0, 128, 512, 0, -4, -126, 4, 126, 848, 489, 152, 10, -152, -10, 660, 735, 148, 18, -148, -18, 386, 375, 128, 0, -178, 6, 0, 512)
+"points": PackedVector2Array(0, -104, 0, 128, 512, 0, 0, 0, 0, 0, 848, 489, 0, 0, 0, 0, 660, 735, 0, 0, 0, 0, 386, 375)
 }
-point_count = 5
+point_count = 4
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_offroad", "_road")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("offroad", "offroad2", "boost", "Road")]
 script = ExtResource("1_32p7d")
-_offroad = NodePath("Polygon2D")
-_road = NodePath("Path2D")
+offroad = NodePath("Polygon2D")
+offroad2 = []
+boost = []
+Road = NodePath("Path2D")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.61, 0.61, 0.61, 1)
